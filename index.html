@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Schedule - Google Calendar App</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.10/index.global.min.js'></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo-area">
+            <span class="logo-icon">📅</span>
+            <h1>My Schedule</h1>
+        </div>
+        
+        <div id="digital_clock" class="clock">00:00:00</div>
+
+        <div class="user-area">
+            <button id="add_event_btn" onclick="openModal()" style="display:none; margin-right: 10px;">+ Add Event</button>
+            
+            <button id="authorize_button" onclick="handleAuthClick()">Sign in</button>
+            <button id="signout_button" onclick="handleSignoutClick()" style="display:none;">Sign Out</button>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div id="login_msg" class="login-card">
+            <h2>Welcome Back!</h2>
+            <p>Please sign in to view and manage your schedule.</p>
+        </div>
+
+        <div id="content" class="calendar-wrapper" style="display: none;">
+            <div id='calendar'></div>
+        </div>
+    </div>
+
+    <div id="eventModal" class="modal-overlay" style="display: none;">
+        <div class="modal-box">
+            <h2>Add New Event</h2>
+            <input type="text" id="ev_title" placeholder="Event Title (e.g. Gym, Meeting)">
+            <div class="row">
+                <input type="date" id="ev_date">
+                <input type="time" id="ev_time">
+            </div>
+            <div class="modal-buttons">
+                <button class="save-btn" onclick="addEventToGoogle()">Save</button>
+                <button class="cancel-btn" onclick="closeModal()">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <script async defer src="https://apis.google.com/js/api.js" onload="gapiLoaded()"></script>
+    <script async defer src="https://accounts.google.com/gsi/client" onload="gisLoaded()"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+/* Global Reset */
+body { font-family: 'Roboto', sans-serif; margin: 0; padding: 0; background-color: #f8f9fa; color: #3c4043; }
+
+/* Navbar */
+.navbar {
+    background-color: white; padding: 10px 30px; display: flex; justify-content: space-between;
+    align-items: center; box-shadow: 0 1px 2px rgba(0,0,0,0.1); border-bottom: 1px solid #dadce0; height: 60px;
+}
+.logo-area { display: flex; align-items: center; gap: 10px; flex: 1; }
+.logo-icon { font-size: 24px; }
+.navbar h1 { font-size: 20px; color: #5f6368; margin: 0; font-weight: 500; }
+
+/* Clock */
+.clock {
+    font-family: 'JetBrains Mono', monospace; font-size: 24px; font-weight: 500;
+    color: #1a73e8; background: #e8f0fe; padding: 5px 15px; border-radius: 6px; letter-spacing: 1px;
+}
+.user-area { flex: 1; display: flex; justify-content: flex-end; }
+
+/* Buttons */
+button { cursor: pointer; font-family: 'Roboto', sans-serif; font-weight: 500; border-radius: 4px; padding: 10px 24px; border: none; transition: 0.2s; }
+#authorize_button { background-color: #1a73e8; color: white; }
+#signout_button { background-color: white; color: #3c4043; border: 1px solid #dadce0; }
+#add_event_btn { background-color: #34a853; color: white; } /* Green Button */
+#add_event_btn:hover { background-color: #2d8e47; }
+
+/* Container */
+.container { max-width: 1100px; margin: 40px auto; padding: 0 20px; }
+.login-card { background: white; padding: 50px; text-align: center; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); max-width: 500px; margin: 60px auto; }
+.calendar-wrapper { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
+.fc-button-primary { background-color: #1a73e8 !important; border-color: #1a73e8 !important; }
+.fc-day-today { background-color: #e8f0fe !important; }
+
+/* 🟢 MODAL STYLES (POPUP) */
+.modal-overlay {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.5); display: flex; justify-content: center; align-items: center; z-index: 1000;
+}
+.modal-box {
+    background: white; padding: 30px; border-radius: 10px; width: 400px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3); text-align: center;
+}
+.modal-box h2 { margin-top: 0; color: #202124; }
+.modal-box input {
+    width: 90%; padding: 10px; margin: 10px 0; border: 1px solid #ddd; border-radius: 4px;
+}
+.row { display: flex; gap: 10px; justify-content: center; }
+.modal-buttons { margin-top: 20px; display: flex; gap: 10px; justify-content: center; }
+.save-btn { background-color: #1a73e8; color: white; width: 100px; }
+.cancel-btn { background-color: #dadce0; color: #3c4043; width: 100px; }
