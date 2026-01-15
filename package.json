@@ -1,0 +1,18 @@
+{
+  "name": "google-calender-app",
+  "version": "1.0.0",
+  "description": "Follow these steps exactly to run the project on your laptop.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "express": "^5.2.1",
+    "googleapis": "^170.0.0"
+  }
+}
