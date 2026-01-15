@@ -1,166 +1,77 @@
-### ⚠️ IMPORTANT BEFORE UPLOADING
-
-**Security Warning:** currently, your `script.js` contains your **REAL** Client ID and API Key. If you upload this to GitHub, anyone can see them.
-
-* **Option A (Safe):** Open `script.js` and replace your keys with `'YOUR_CLIENT_ID_HERE'` before uploading.
-* **Option B (Easy):** If you don't care about security for this college project, you can upload it as is, but Google might auto-disable the keys if they detect a leak.
+# 🎓 Final Year Project Viva Guide
+**Project Title:** Google Calendar Clone / Personal Scheduler
+**Student Name:** Mayur
+**Course:** BBA Final Year
 
 ---
 
-### 📄 File 1: `Readme.md`
-
-**Action:** Create a file named `Readme.md` in your main folder and paste this code.
-
-```markdown
-# 📅 Google Calendar Clone
-
-A fully functional **Schedule Management App** that integrates with **Google Calendar**. 
-This project allows users to securely log in with their Google account, view their upcoming events in a real-time calendar grid, and add new events directly from the dashboard.
-
-## 🚀 Features
-* **Secure Login:** Uses **OAuth 2.0** (Google Identity Services) for secure authentication.
-* **View Schedule:** Fetches real-time events from your Google Calendar.
-* **Add Events:** Create new events (Title, Date, Time) that instantly sync to your Google account.
-* **Professional UI:** Built with **FullCalendar.js** for a responsive monthly grid view.
-* **Real-time Clock:** Displays the current time dynamically.
-
----
-
-## 🛠️ Tech Stack
-* **Frontend:** HTML5, CSS3, JavaScript (Vanilla).
-* **Backend/Server:** Node.js, Express.js (used to serve the application).
-* **APIs Used:** * Google Calendar API (v3)
-    * Google Identity Services (OAuth 2.0)
-* **Libraries:** FullCalendar.js (for the grid UI).
-
----
-
-## ⚙️ How to Run Locally
-
-Follow these steps to run the project on your machine:
-
-### 1. Prerequisites
-Make sure you have **Node.js** installed.
-* Download here: [nodejs.org](https://nodejs.org/)
-
-### 2. Clone or Download
-Download this repository to your computer and open the folder in **VS Code**.
-
-### 3. Install Dependencies
-Open the Terminal in VS Code (`Ctrl + ~`) and run:
-```bash
-npm install
-
-```
-
-### 4. Setup Google Keys
-
-1. Go to [Google Cloud Console](https://console.cloud.google.com/).
-2. Create a project and enable **Google Calendar API**.
-3. Create OAuth 2.0 Credentials (Client ID).
-4. Open `Public/script.js` and replace the keys at the top:
-
-```javascript
-const CLIENT_ID = 'YOUR_CLIENT_ID_HERE';
-const API_KEY = 'YOUR_API_KEY_HERE';
-
-```
-
-### 5. Start the Server
-
-Run the following command in the terminal:
-
-```bash
-node server.js
-
-```
-
-### 6. Open in Browser
-
-Go to your browser and type:
-[http://localhost:3000](https://www.google.com/search?q=http://localhost:3000)
-
----
-
-## 📸 Screenshots
-
-*(You can upload screenshots of your login page and calendar view here later)*
-
----
-
-## 👨‍💻 Author
-
-**Mayur** BBA Final Year Student | Jalgaon
-
-*Aspiring MBA | Tech Enthusiast*
-
-```
-
----
-
-### 📄 File 2: `VIVA_GUIDE.md`
-**Action:** Create a file named `VIVA_GUIDE.md`. Keep this for yourself to study before your exam/viva.
-
-```markdown
-# 🎓 Final Year Project - Viva Questions & Answers
-**Project:** Google Calendar Clone
-**Student:** Mayur
-
----
-
-## 1. Project Introduction (The Elevator Pitch)
+## 1. Introduction (The "Elevator Pitch")
 **Examiner:** "Tell me about your project."
 
-**Answer:** "My project is a **Google Calendar Clone**. It is a web application that helps users manage their daily schedule efficiently. 
-It integrates directly with the **Google Calendar API**, allowing users to **Log In** securely using their Google account, **View** their upcoming events, and **Add** new tasks. 
-I built this using **Node.js** for the server and **Vanilla JavaScript** for the API logic."
+**Your Answer:**
+"Good morning Sir/Madam. My project is a **Smart Schedule Management Application**.
+In today's busy corporate world, time management is crucial. My application helps users organize their day efficiently.
+
+It is a web-based app that integrates directly with **Google Calendar**.
+* It allows users to **securely log in** with their Google Account.
+* They can **view their real-time schedule** in a clean dashboard.
+* They can **add new meetings or tasks**, which instantly sync to their phone and Google account.
+
+I built this using **Web Technologies** (HTML, CSS, JavaScript) and **Google's Cloud APIs** to handle the data securely."
 
 ---
 
-## 2. Technical Questions
+## 2. Technical Stack (Keep it Simple)
+**Examiner:** "What technologies did you use?"
 
-### Q: What technologies did you use?
-**A:** * **Frontend:** HTML for structure, CSS for styling, and JavaScript for logic.
-* **Library:** I used `FullCalendar.js` to display the calendar grid nicely.
-* **Backend:** I used **Node.js** and **Express** to create a local server that hosts the application.
-* **API:** I used Google's **OAuth 2.0** for login and **Calendar API v3** to fetch data.
-
-### Q: How does the Login work?
-**A:** It uses **OAuth 2.0** (Open Authorization). 
-1. When the user clicks "Sign In", a request is sent to Google's servers.
-2. The user approves access in the popup window.
-3. Google sends back an **Access Token**.
-4. My app uses this token as a "key" to fetch their private calendar events.
-*Note: We never see or save the user's password.*
-
-### Q: Where is your Database?
-**A:** I don't need a local database like SQL or MongoDB. The data is stored in **Google's Cloud Database**. My application acts as an interface (UI) to fetch and display that data using API calls.
-
-### Q: What is `node_modules`?
-**A:** It is a folder that contains all the external libraries (dependencies) required by the project, like `express`. It is automatically created when we run `npm install`.
-
-### Q: Why did you use `async` and `await` in your code?
-**A:** Fetching data from Google takes time (it's asynchronous). 
-* `await` tells JavaScript to "pause and wait" until the data arrives before moving to the next line.
-* If we didn't use this, the calendar might try to load before the events are ready, resulting in an empty screen.
+**Your Answer:** "I used a standard Web Development stack:"
+1.  **Frontend (Design):** HTML5 and CSS3 for the layout and blue theme.
+2.  **Logic:** Vanilla JavaScript to handle the buttons and data.
+3.  **Server:** Node.js (specifically Express.js) to host the website locally.
+4.  **Database & Security:** Instead of building a local database, I used **Google Cloud APIs**. This ensures data is safer and accessible from anywhere, not just this laptop.
 
 ---
 
-## 3. Explaining the Code Flow
+## 3. Key Concepts (Prepare these definitions)
 
-1.  **Server Starts:** `node server.js` starts the Express server on Port 3000.
-2.  **User Visits:** The browser loads `index.html` from the `Public` folder.
-3.  **Scripts Load:** The app loads Google's API scripts (`gapi` and `gis`).
-4.  **User Logins:** The `handleAuthClick()` function runs, requesting permission.
-5.  **Fetch Data:** Once logged in, `listUpcomingEvents()` calls the Google API.
-6.  **Display:** The data is passed to `FullCalendar`, which draws the blue events on the screen.
+**Q: What is an API?**
+**A:** "API stands for **Application Programming Interface**. Think of it like a **Waiter** in a restaurant. I (the Frontend) ask the Waiter (API) for data, the Waiter goes to the Kitchen (Google Servers) and brings the food (Events) back to me. It connects two softwares."
+
+**Q: Where is your Database?**
+**A:** "I am using **Cloud Storage**. The data is stored on Google's secure servers. My app uses the **Google Calendar API** to read and write that data. This is better than a local database because if my laptop breaks, the user's data is still safe on Google."
+
+**Q: How does the Login work?**
+**A:** "I used **OAuth 2.0**. This is the industry standard for security. When you click 'Login', Google checks your credentials. If they are correct, Google gives my app a temporary **'Key' (Token)** to access the calendar. We never see or save the user's password."
 
 ---
 
-## 4. Future Improvements
-**Examiner:** "What else could you add?"
-**A:** 1.  **Delete/Edit Events:** Currently, I can only add. I would like to add buttons to update or delete events.
-2.  **Mobile App:** Convert this website into a React Native app for phones.
-3.  **Reminders:** Add SMS or Email notifications before an event starts.
+## 4. Business & Management Questions (BBA Special)
 
-```
+**Q: What is the utility/use of this project for a business?**
+**A:** "Time is money. This tool improves **Productivity**.
+1.  **Centralization:** Keeps all tasks in one place.
+2.  **Accessibility:** Since it syncs with Google, a manager can add a meeting here, and it appears on their mobile immediately.
+3.  **Cost-Effective:** It uses free Google infrastructure, so there are no expensive server maintenance costs."
+
+**Q: What are the limitations?**
+**A:** "Currently, it requires an active Internet connection to work. Also, I have not added a 'Delete' button yet to prevent accidental data loss."
+
+---
+
+## 5. Future Scope (What's next?)
+**Examiner:** "How can you expand this?"
+
+**Your Answer:**
+1.  **Team Collaboration:** Allow managers to assign tasks to employees' calendars.
+2.  **SMS Reminders:** Integrate Twilio API to send SMS alerts 10 minutes before a meeting.
+3.  **Offline Mode:** Allow users to view cached events even without the internet.
+
+---
+
+## 6. Trap Questions (Don't Panic!)
+
+**Trap:** "Is HTML a programming language?"
+**Answer:** "No Sir, HTML is a **Markup Language** used for structure. JavaScript is the programming language used for logic."
+
+**Trap:** "Can you hack someone's calendar with this?"
+**Answer:** "No. The security is handled by Google. The user **must** click 'Allow' in the popup window to give permission. Without that permission, the app cannot access anything."
