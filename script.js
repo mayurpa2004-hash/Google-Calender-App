@@ -3,8 +3,8 @@
 // ==========================================
 // 🔑 YOUR KEYS (Already Added)
 // ==========================================
-const CLIENT_ID = '812597016394-f40sduvt2caqrnho7l15vumqtnuajpn5.apps.googleusercontent.com';
-const API_KEY = 'AIzaSyClgEdJ91Nxvbnb6yVIUiDXqK3JJJ0iISY';
+const CLIENT_ID = 'YOUR_CLIENT_ID_HERE';
+const API_KEY = 'YOUR_API_KEY_HERE';
 // ==========================================
 
 const DISCOVERY_DOC = 'https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest';
@@ -175,4 +175,5 @@ function updateClock() {
     document.getElementById('digital_clock').innerText = now.toLocaleTimeString();
 }
 setInterval(updateClock, 1000);
+
 updateClock();
